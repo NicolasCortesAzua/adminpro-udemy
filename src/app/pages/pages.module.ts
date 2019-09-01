@@ -15,6 +15,9 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 // Componente graficoDona
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
 
+// Settings
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+
 @NgModule({
     declarations: [
         PagesComponent,
@@ -22,7 +25,8 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
         ProgressComponent,
         Graficas1Component,
         IncrementadorComponent,
-        GraficoDonaComponent
+        GraficoDonaComponent,
+        AccountSettingsComponent
     ],
     exports: [
         PagesComponent,

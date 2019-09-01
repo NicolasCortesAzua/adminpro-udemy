@@ -6,11 +6,11 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef }
   styles: []
 })
 export class IncrementadorComponent implements OnInit {
-  @ViewChild('txtProgress') txtProgress: ElementRef;
+  @ViewChild('txtProgress', {static: true}) txtProgress: ElementRef;
 
   // nombre = Nombre que recibe la funcion fuera de este componente
   @Input('nombre') leyenda: string = 'Leyenda';
-  @Input()progreso: number = 50;
+  @Input() progreso: number = 50;
 
   // actualizaValor = Nombre que recibe la funcion fuera de este componente
   @Output('actualizaValor') cambioValor: EventEmitter<number> =  new EventEmitter();
