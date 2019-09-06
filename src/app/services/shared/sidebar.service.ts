@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SidebarService {
   menu: any = [
     {
@@ -11,7 +9,8 @@ export class SidebarService {
       submenu: [
         { titulo: 'Dashboard', url: '/dashboard' },
         { titulo: 'ProgressBar', url: '/progress' },
-        { titulo: 'Graficas', url: '/graficas1' }
+        { titulo: 'Graficas', url: '/graficas1' },
+        { titulo: 'Promesas', url: '/promesas' }
       ]
     }
   ];

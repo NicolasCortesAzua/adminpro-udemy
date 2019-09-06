@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Label, MultiDataSet } from 'ng2-charts';
 import { ChartType } from 'chart.js';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-graficas1',
@@ -39,6 +40,17 @@ export class Graficas1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    Swal.fire({
+      position: 'center',
+      type: 'success',
+      title: 'Datos Cargados Coorectamente',
+      animation: false,
+      customClass: {
+        popup: 'animated zoomInUp'
+      },
+      showConfirmButton: true,
+      timer: 1500
+    });
   }
 
 }
