@@ -46,10 +46,9 @@ export class Graficas1Component implements OnInit {
       title: 'Datos Cargados Coorectamente',
       animation: false,
       customClass: {
-        popup: 'animated zoomInUp'
+        popup: 'animated bounce'
       },
-      showConfirmButton: true,
-      timer: 1500
+      showConfirmButton: true
     });
   }
 
