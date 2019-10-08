@@ -8,7 +8,7 @@ import { APP_ROUTES } from './app.routes';
 import { PagesModule } from './pages/pages.module';
 
 // Temporal
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Componentes
 import { AppComponent } from './app.component';
@@ -18,6 +18,9 @@ import { SettingsService } from './services/settings/settings.service';
 
 // Servicios
 import { ServiceModule } from './services/service.module';
+
+// Http Client
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { ServiceModule } from './services/service.module';
     APP_ROUTES,
     PagesModule,
     FormsModule,
-    ServiceModule
+    ReactiveFormsModule,
+    ServiceModule,
+    HttpClientModule
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent]
