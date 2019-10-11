@@ -6,6 +6,8 @@ import { Usuario } from '../models/usuario.model';
 
 declare function init_plugins();
 
+declare const gapi: any;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,13 +15,31 @@ declare function init_plugins();
 })
 export class LoginComponent implements OnInit {
 
+  email: string;
   recuerdame: boolean = false;
+
+  auth2: any;
+
   constructor(
     public router: Router,
     public usuarioService: UsuarioService ) { }
 
   ngOnInit() {
     init_plugins();
+
+    this.email = localStorage.getItem('email') || '';
+
+    if( this.email.length > 1 ){
+      this.recuerdame = true;
+    }
+  }
+
+  googleInit(){
+    gapi.load('auth', () => {
+      this.auth2 = gapi.auth2.init({
+        client_id: ''
+      });
+    });
   }
 
   ingresar(forma: NgForm) {

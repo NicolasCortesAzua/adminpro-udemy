@@ -8,6 +8,7 @@ import { SettingsService } from './services/service.index';
 })
 export class AppComponent {
 
+  // tslint:disable-next-line:variable-name
   constructor(public _ajustes: SettingsService) {}
 
 }
